@@ -1,0 +1,55 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  min-width: 220px !important;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
