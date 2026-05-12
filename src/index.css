@@ -8,12 +8,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body, #root {
   height: 100%;
+  /* Use dvh for better mobile viewport handling (accounts for browser chrome) */
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
+  /* Prevent iOS overscroll bounce on main container */
+  overscroll-behavior: none;
+}
+
+/* Improve touch response on mobile */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Better scroll momentum on iOS */
+.overflow-y-auto, .overflow-y-scroll {
+  -webkit-overflow-scrolling: touch;
 }
 
 .leaflet-container {
